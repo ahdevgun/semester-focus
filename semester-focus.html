@@ -59,6 +59,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
 .round-m{font-size:18px;margin-top:4px;overflow-wrap:anywhere}
 .t-head{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-bottom:14px;border-bottom:2px solid rgba(255,255,255,.6)}
 .t-head h2{margin:0;font-size:18px;font-weight:700}
+.t-wk{font-size:13px;font-weight:600;opacity:.8;margin-top:2px}
 .menu-wrap{position:relative}
 .menu-btn{width:32px;height:32px;display:grid;place-items:center;border:0;border-radius:4px;background:rgba(255,255,255,.2);color:#fff;padding:0}
 .dropdown{position:absolute;right:0;top:calc(100% + 8px);background:#fff;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,.15),0 3px 6px rgba(0,0,0,.1);min-width:230px;padding:4px 0;z-index:10;color:#555}
@@ -106,7 +107,7 @@ textarea.pfield{height:auto;min-height:72px;padding:10px;margin-top:16px;resize:
 .summary{margin-top:28px;padding:18px 12px;background:rgba(255,255,255,.1);border-top:1px solid rgba(255,255,255,.8);text-align:center;color:rgba(255,255,255,.7);font-size:18px;display:flex;justify-content:center;flex-wrap:wrap;gap:4px 24px}
 .summary b{color:#fff;font-size:22px;margin-left:6px;font-variant-numeric:tabular-nums}
 
-/* ---------- pages (tasks, plan, classes) ---------- */
+/* ---------- pages (tasks, classes) ---------- */
 .page{max-width:620px;margin:0 auto;padding-block:32px 80px}
 .pg-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px 16px;flex-wrap:wrap}
 .pg-title{margin:0;font-size:26px;font-weight:800;color:#fff}
@@ -157,33 +158,28 @@ textarea.field{height:auto;min-height:72px;padding:9px 10px;width:100%;resize:ve
 .focus-btn svg{width:18px;height:18px}
 .empty{padding:28px 8px;color:rgba(255,255,255,.85);text-align:center;line-height:1.5;font-weight:600}
 .linkish{border:0;background:none;color:inherit;font-weight:800;text-decoration:underline;padding:0}
+.wknav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:18px}
+.wk-label{font-size:15px;font-weight:600;color:rgba(255,255,255,.85);margin:0 6px}
+.wk-label b{color:#fff;font-weight:800;margin-right:8px}
+.wknav .linkish{font-size:13px}
 
-/* ---------- plan ---------- */
-.goal{display:flex;align-items:center;gap:8px;margin-top:20px;padding:12px 14px;border-radius:6px;background:rgba(255,255,255,.1);font-weight:700;font-size:15px}
-.goal .lbl{margin-right:auto}
-.goal .lbl small{display:block;font-size:13px;font-weight:600;opacity:.78}
-.goal b{min-width:2.2ch;text-align:center;font-size:20px;font-variant-numeric:tabular-nums}
-.gbtn{width:32px;height:32px;border:0;border-radius:4px;background:rgba(255,255,255,.2);color:#fff;display:grid;place-items:center;padding:0}
-.gbtn:hover{background:rgba(255,255,255,.3)}
-.day{margin-top:30px}
-.day-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.day-h h2{margin:0;font-size:18px;font-weight:800}
-.day-h .dt{font-weight:600;opacity:.75}
-.day-h .load{margin-left:auto;font-size:14px;font-weight:700;opacity:.9;font-variant-numeric:tabular-nums}
-.day-h .load.over{opacity:1;background:rgba(0,0,0,.2);border-radius:10px;padding:1px 8px}
-.meter{height:3px;margin:10px 0 4px;background:rgba(255,255,255,.3);border-radius:2px;overflow:hidden}
-.meter>div{height:100%;background:#fff;border-radius:2px}
-.free{margin-top:8px;padding:12px 14px;border:2px dashed rgba(255,255,255,.3);border-radius:6px;color:rgba(255,255,255,.75);font-weight:600}
-.task.chunk,.task.chunk:hover{border-left-color:var(--c)}
-.chunk{align-items:flex-start}
-.chunk .check{margin-top:-1px}
-.chunk .pips,.chunk .count,.chunk .edit-btn{align-self:center}
-span.check{cursor:default}
-.part{background:var(--fill);border-radius:10px;padding:0 7px;color:var(--sub)}
-.pips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px;max-width:76px;flex:none}
-.pips i{width:12px;height:12px;border-radius:50%;background:var(--line)}
-.pips i.on{background:var(--mode)}
-.play-btn{color:var(--mode)}
+/* ---------- group by class ---------- */
+.seg{display:inline-flex;gap:2px;padding:2px;border-radius:6px;background:rgba(0,0,0,.12)}
+.seg button{height:28px;padding:0 10px;border:0;border-radius:4px;background:none;color:#fff;font-weight:700;font-size:13px;opacity:.85;white-space:nowrap}
+.seg button:hover{opacity:1}
+.seg button.on{background:#fff;color:var(--mode);opacity:1}
+.t-head .seg{margin-left:auto;margin-right:8px}
+.cgrp{display:flex;align-items:center;gap:12px;width:100%;margin-top:8px;padding:16px 14px;border:0;border-left:6px solid var(--c);border-radius:4px;background:#fff;color:var(--ink);text-align:left;box-shadow:rgba(0,0,0,.1) 0 2px 2px}
+.cgrp:hover{background:#fafafa}
+.cgrp .swatch{width:14px;height:14px}
+.cg-main{flex:1;min-width:0}
+.cg-name{display:block;font-size:16px;font-weight:800;overflow-wrap:anywhere}
+.cg-sub{font-size:13px;font-weight:600;color:#999;margin-top:2px}
+.cgrp .count{font-size:18px}
+.chev{color:var(--muted);transition:transform .15s}
+.cgrp[aria-expanded="true"] .chev{transform:rotate(90deg)}
+.cg-kids{margin-left:16px}
+.cg-kids .task,.cg-kids .trow{margin-top:6px}
 
 /* ---------- dialogs, toast ---------- */
 .icon-btn{width:34px;height:34px;border-radius:4px;border:0;background:none;display:grid;place-items:center;color:var(--muted);padding:0;flex:none}
@@ -242,6 +238,14 @@ span.check{cursor:default}
 .day-t:hover{background:var(--soft)}
 .day-t.on{background:#222;border-color:#222;color:#fff}
 .cf-grid{display:grid;grid-template-columns:1fr 1fr 2fr;gap:12px;margin-top:18px}
+.grip{width:28px;height:32px;margin:0 -6px 0 -4px;border:0;border-radius:4px;background:none;color:#bbb;display:grid;place-items:center;padding:0;flex:none;cursor:grab;touch-action:none}
+.grip:hover{color:var(--ink);background:var(--soft)}
+.cls-row.lifted{opacity:.35}
+
+/* ---------- drag & drop ---------- */
+.ghost{position:fixed;left:0;top:0;margin:0;pointer-events:none;z-index:90;box-shadow:rgba(0,0,0,.25) 0 12px 24px;will-change:transform}
+body.dnd{-webkit-user-select:none;user-select:none}
+body.dnd *{cursor:grabbing !important}
 
 @media (max-width:640px){
   .brand span{display:none}
@@ -261,7 +265,7 @@ span.check{cursor:default}
   .d-foot{margin-inline:-16px}
   .focus-btn span{display:none}
   .focus-btn{padding:0 8px}
-  .pips{max-width:44px}
+  .cg-kids{margin-left:8px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none !important}
@@ -274,7 +278,6 @@ span.check{cursor:default}
     <nav class="tabs" aria-label="Screens">
       <button class="tab" data-act="view" data-view="timer" id="tab-timer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61 1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0 0 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg><span>Timer</span><span class="badge" id="navTime" hidden></span></button>
       <button class="tab" data-act="view" data-view="tasks" id="tab-tasks"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 7h-9v2h9V7zm0 8h-9v2h9v-2zM5.54 11 2 7.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 11zm0 8L2 15.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 19z"/></svg><span>Tasks</span></button>
-      <button class="tab" data-act="view" data-view="plan" id="tab-plan"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17 10H7v2h10v-2zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zm-5-5H7v2h7v-2z"/></svg><span>Plan</span></button>
       <button class="tab" data-act="view" data-view="classes" id="tab-classes"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>Classes</span></button>
     </nav>
     <button class="tab" data-act="settings" aria-label="Timer settings" title="Timer settings"><svg viewBox="0 0 24 24" aria-hidden="true" style="display:block"><path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></button>
@@ -307,7 +310,8 @@ span.check{cursor:default}
         <div class="round-m" id="roundMsg">Time to focus!</div>
       </div>
       <div class="t-head">
-        <h2>Tasks</h2>
+        <div><h2>This week</h2><div class="t-wk" id="tWeek"></div></div>
+        <div class="seg" id="tSeg" role="group" aria-label="Show tasks by"></div>
         <div class="menu-wrap">
           <button class="menu-btn" data-act="tmenu" aria-label="Task options" aria-haspopup="true"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></button>
           <div class="dropdown" id="tmenu" hidden></div>
@@ -319,7 +323,6 @@ span.check{cursor:default}
   </section>
 
   <section class="view" id="v-tasks" hidden></section>
-  <section class="view" id="v-plan" hidden></section>
   <section class="view" id="v-classes" hidden></section>
 </main>
 
@@ -361,6 +364,7 @@ const P={
   pin:'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z',
   timer:'M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61 1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0 0 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z',
   play:'M8 5v14l11-7z',
+  drag:'M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z',
   circle:'M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z',
   checkC:'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z',
   edit:'M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z',
@@ -385,6 +389,17 @@ const toMin=t=>{const[h,m]=t.split(':').map(Number);return h*60+m};
 const toHM=m=>pad(Math.floor(m/60))+':'+pad(m%60);
 const clampInt=(v,min,max,def)=>{v=parseInt(v,10);return isNaN(v)?def:Math.min(max,Math.max(min,v))};
 const dayDiff=(a,b)=>Math.round((parse(b)-parse(a))/864e5);
+// Weeks run Saturday through Friday; a week is keyed by its Saturday.
+const weekOf=s=>addDays(s,-((parse(s).getDay()+1)%7));
+const inWeek=(s,w)=>!!s&&s>=w&&s<=addDays(w,6);
+function fmtWeek(w){
+  const a=parse(w),b=parse(addDays(w,6)),f=d=>`${DOW3[d.getDay()]}, ${MON3[d.getMonth()]} ${d.getDate()}`;
+  return f(a)+' – '+f(b)+(b.getFullYear()!==new Date().getFullYear()?`, ${b.getFullYear()}`:'');
+}
+function weekName(w){
+  const cur=weekOf(today());
+  return w===cur?'this week':w===addDays(cur,7)?'next week':w===addDays(cur,-7)?'last week':'the week of '+fmtWeek(w);
+}
 
 function fmtTime(t){if(!t)return'';let[h,m]=t.split(':').map(Number);const ap=h<12?'am':'pm';h=h%12||12;return m?`${h}:${pad(m)}${ap}`:`${h}${ap}`}
 function fmtRange(s,e){if(!s)return'';if(!e)return fmtTime(s);const am=t=>+t.split(':')[0]<12;const a=fmtTime(s),b=fmtTime(e);return am(s)===am(e)?a.replace(/am|pm/,'')+' – '+b:a+' – '+b}
@@ -397,10 +412,10 @@ function fmtDue(s){
 }
 
 /* ================= state ================= */
-const DEF_SET={pomo:25,short:5,long:15,interval:4,autoBreak:false,autoPomo:false,sound:true,daily:8};
+const DEF_SET={pomo:25,short:5,long:15,interval:4,autoBreak:false,autoPomo:false,sound:true};
 function fresh(){return{v:1,classes:[],tasks:[],activeTaskId:null,settings:{...DEF_SET},
-  timer:{mode:'pomo',remaining:25*60000,endAt:null,pomos:0},view:'timer',
-  log:{},tv:{cls:'all',showDone:false},examplesDismissed:false}}
+  timer:{mode:'pomo',remaining:25*60000,endAt:null,pomos:0,week:weekOf(today())},weekly:{},view:'timer',
+  tv:{cls:'all',showDone:false,by:'due'},tl:{by:'due'},examplesDismissed:false}}
 function seed(s){
   const td=today();
   s.classes=[
@@ -426,22 +441,30 @@ function load(){
   try{s=JSON.parse(localStorage.getItem(KEY))}catch(e){}
   const f=fresh();
   if(s&&s.v===1){
-    const o={...f,...s,settings:{...f.settings,...s.settings},timer:{...f.timer,...s.timer},tv:{...f.tv,...s.tv},log:{...s.log}};
-    delete o.cal;if(o.view==='calendar')o.view='plan';
-    const cut=addDays(today(),-7);Object.keys(o.log).forEach(d=>{if(d<cut)delete o.log[d]});
+    const o={...f,...s,settings:{...f.settings,...s.settings},timer:{...f.timer,...s.timer},tv:{...f.tv,...s.tv},tl:{...f.tl,...s.tl}};
+    delete o.cal;delete o.log;delete o.settings.daily;o.tasks.forEach(t=>delete t.plan);
+    if(o.view==='calendar'||o.view==='plan')o.view='tasks';
+    if(!s.timer||!s.timer.week)o.timer.week=weekOf(today()); // older saves: start tracking without resetting the count
+    rollWeek(o);
     return o;
   }
   return seed(f);
 }
+// When a new Saturday starts, the round counter starts over. Returns true if the week changed.
+function rollWeek(s){
+  const w=weekOf(today());
+  if(s.timer.week===w)return false;
+  s.timer.week=w;s.timer.pomos=0;return true;
+}
 let S=load();
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
-const ui={editing:null,noteOpen:false,focusForm:false,modal:null,classEdit:null,delConfirm:null,undo:null,tt:0};
-// pomodoros put toward each task today, so today's plan can show progress instead of shrinking
-const logToday=()=>(S.log[today()]||={});
+const ui={editing:null,noteOpen:false,focusForm:false,modal:null,classEdit:null,delConfirm:null,undo:null,tt:0,open:new Set(),week:null};
 
 const task=id=>S.tasks.find(t=>t.id===id);
 const cls=id=>S.classes.find(c=>c.id===id);
 const colorOf=t=>{const c=cls(t.classId);return c?c.color:NOCLASS};
+// Estimate that still counts toward totals: a finished task drops its unused pomodoros.
+const estOf=t=>t.done?Math.min(t.est,t.act):t.est;
 function isOverdue(t){if(t.done||!t.due)return false;const td=today();return t.due<td||(t.due===td&&!!t.time&&t.time<nowHM())}
 function byDue(a,b){
   if(a.done!==b.done)return a.done?1:-1;
@@ -449,6 +472,14 @@ function byDue(a,b){
   const at=a.time||'99',bt=b.time||'99';if(at!==bt)return at<bt?-1:1;
   return (a.created||0)-(b.created||0);
 }
+// The week a task belongs to: finished tasks count toward the week they were finished;
+// open tasks toward the week they're due, with undated and overdue ones carried into the current week.
+function taskWeek(t){
+  const cur=weekOf(today());
+  if(t.done)return weekOf(ymd(new Date(t.doneAt||t.created||Date.now())));
+  return !t.due||t.due<cur?cur:weekOf(t.due);
+}
+const weekTasks=w=>S.tasks.filter(t=>taskWeek(t)===w);
 function classOptions(sel){return `<option value="">No class</option>`+S.classes.map(c=>`<option value="${c.id}"${c.id===sel?' selected':''}>${esc(c.name)}</option>`).join('')}
 function upsert(id,data){
   if(id){const t=task(id);if(!t)return;if(data.done&&!t.done)data.doneAt=Date.now();Object.assign(t,data);delete t.ex;return t}
@@ -478,15 +509,18 @@ function setMode(m,auto){S.timer.mode=m;S.timer.remaining=total(m);S.timer.endAt
 function complete(silent,fromLoad){
   const m=S.timer.mode;let next;
   if(m==='pomo'){
+    rollWeek(S);
+    const w=weekOf(ymd(new Date(S.timer.endAt||Date.now())));
+    S.weekly[w]=(S.weekly[w]||0)+1;
     S.timer.pomos++;
-    const t=task(S.activeTaskId);if(t&&!t.done){t.act++;const lg=logToday();lg[t.id]=(lg[t.id]||0)+1}
+    const t=task(S.activeTaskId);if(t&&!t.done)t.act++;
     next=S.timer.pomos%S.settings.interval===0?'long':'short';
   }else next='pomo';
   const auto=!fromLoad&&(next==='pomo'?S.settings.autoPomo:S.settings.autoBreak);
   setMode(next,auto);
   if(!silent&&S.settings.sound)beep();
   if(S.view==='timer'){if(!ui.editing)renderTimerTasks();else renderSummary()}
-  else if(!ui.modal&&!typing())renderView();
+  else if(!ui.modal&&!typing()&&!dnd.s)renderView();
 }
 function applyMode(){
   const m=S.timer.mode;
@@ -508,10 +542,35 @@ function updateClock(){
   const b=$('#navTime');const show=run&&S.view!=='timer';b.hidden=!show;if(show)b.textContent=txt;
 }
 
+/* ================= group by class ================= */
+// Buckets tasks under their class (in the Classes tab's order), "No class" last.
+function byClass(list){
+  const g=S.classes.map(c=>({key:c.id,name:c.name,color:c.color,tasks:[]}));
+  const none={key:'none',name:'No class',color:NOCLASS,tasks:[]};
+  list.forEach(t=>(g.find(x=>x.key===t.classId)||none).tasks.push(t));
+  return [...g,none].filter(x=>x.tasks.length);
+}
+function segBtns(where,by){
+  return [['due','Due date'],['class','Class']].map(([k,l])=>`<button class="${by===k?'on':''}" data-act="groupBy" data-where="${where}" data-by="${k}" aria-pressed="${by===k}">${l}</button>`).join('');
+}
+// A collapsed class card: total pomodoros for its tasks; click to show the tasks inside.
+function classGroup(g,where,kids){
+  const key=where+':'+g.key,open=ui.open.has(key),od=g.tasks.filter(isOverdue).length;
+  const act=g.tasks.reduce((a,t)=>a+t.act,0),est=g.tasks.reduce((a,t)=>a+estOf(t),0);
+  const next=g.tasks.find(t=>!t.done&&t.due),left=g.tasks.filter(t=>!t.done).length;
+  const sub=[`${left} task${left===1?'':'s'} left`,od?`<span class="od">${od} overdue</span>`:'',next?`next due ${fmtDue(next.due)}`:''].filter(Boolean).join(' · ');
+  return `<button class="cgrp" style="--c:${g.color}" data-act="groupToggle" data-key="${key}" aria-expanded="${open}">
+    <span class="swatch"></span>
+    <span class="cg-main"><span class="cg-name">${esc(g.name)}</span><span class="cg-sub" style="display:block">${sub}</span></span>
+    <span class="count" title="Pomodoros done / estimated">${act}<span>/${est}</span></span>
+    <span class="chev">${ic('chevR',22)}</span>
+  </button>${open?`<div class="cg-kids">${kids(g.tasks)}</div>`:''}`;
+}
+
 /* ================= timer screen: tasks ================= */
 function timerTasks(){
-  const cutoff=Date.now()-18*3600e3;
-  return S.tasks.filter(t=>!t.done||(t.doneAt||0)>cutoff||t.id===S.activeTaskId).sort(byDue);
+  const cur=weekOf(today());
+  return S.tasks.filter(t=>taskWeek(t)===cur||t.id===S.activeTaskId).sort(byDue);
 }
 function tItem(t){
   const c=cls(t.classId),od=isOverdue(t);
@@ -554,8 +613,12 @@ function tForm(t){
   </form>`;
 }
 function renderTimerTasks(){
-  const list=timerTasks();
-  let h=list.map(t=>ui.editing===t.id?tForm(t):tItem(t)).join('');
+  const list=timerTasks(),by=S.tl.by;
+  $('#tSeg').innerHTML=segBtns('timer',by);
+  const row=t=>ui.editing===t.id?tForm(t):tItem(t);
+  // while grouped, keep the class holding the task being edited open so its form shows
+  const et=task(ui.editing);if(by==='class'&&et)ui.open.add('timer:'+(cls(et.classId)?et.classId:'none'));
+  let h=by==='class'?byClass(list).map(g=>classGroup(g,'timer',ts=>ts.map(row).join(''))).join(''):list.map(row).join('');
   h+=ui.editing==='new'?tForm(null):`<button class="add-task" data-act="addTask">${ic('plusC',20)} Add Task</button>`;
   $('#tList').innerHTML=h;
   if(ui.focusForm){ui.focusForm=false;const f=$('#f-title');if(f)f.focus()}
@@ -563,8 +626,9 @@ function renderTimerTasks(){
 }
 function renderSummary(){
   const list=timerTasks();const el=$('#tSummary');
+  $('#tWeek').textContent=fmtWeek(weekOf(today()));
   if(!list.length){el.innerHTML='';return}
-  const act=list.reduce((a,t)=>a+t.act,0),est=list.reduce((a,t)=>a+t.est,0);
+  const act=list.reduce((a,t)=>a+t.act,0),est=list.reduce((a,t)=>a+estOf(t),0);
   const left=list.filter(t=>!t.done).reduce((a,t)=>a+Math.max(0,t.est-t.act),0);
   const mins=left*S.settings.pomo+Math.max(0,left-1)*S.settings.short;
   const fin=new Date(Date.now()+mins*60000);
@@ -576,10 +640,10 @@ function saveTForm(){
   const data={title,est:clampInt($('#f-est').value,1,99,1),classId:$('#f-class').value,due:$('#f-due').value,time:$('#f-time').value,note:($('#f-note')?.value||'').trim()};
   if($('#f-act'))data.act=clampInt($('#f-act').value,0,999,0);
   const isNew=!f.dataset.id;
-  upsert(f.dataset.id||null,data);
+  const t=upsert(f.dataset.id||null,data),w=t&&t.id!==S.activeTaskId&&taskWeek(t);
   ui.editing=null;ui.noteOpen=false;
   save();renderTimerTasks();updateClock();
-  toast(isNew?'Task added':'Task saved');
+  toast((isNew?'Task added':'Task saved')+(w&&w!==weekOf(today())?` — find it on Tasks under ${weekName(w)}`:''));
 }
 function renderTimerMenu(){
   $('#tmenu').innerHTML=[
@@ -608,20 +672,34 @@ function tRow(t){
     ${t.done?'':`<button class="focus-btn" data-act="focus" data-id="${t.id}" aria-label="Focus on ${esc(t.title)}">${ic('play',18)}<span>Focus</span></button>`}
   </div>`;
 }
+function dayLabel(s){
+  const td=today(),d=parse(s),l=`${DOW[d.getDay()]}, ${MON3[d.getMonth()]} ${d.getDate()}`;
+  return s===td?'Today · '+l:s===addDays(td,1)?'Tomorrow · '+l:l;
+}
 function renderTasks(){
-  const td=today(),f=S.tv.cls;
+  const td=today(),cur=weekOf(td),w=ui.week||cur,f=S.tv.cls;
   if(f!=='all'&&f!=='none'&&!cls(f))S.tv.cls='all';
-  const list=S.tasks.filter(t=>S.tv.cls==='all'||(S.tv.cls==='none'?!t.classId:t.classId===S.tv.cls));
+  const list=weekTasks(w).filter(t=>S.tv.cls==='all'||(S.tv.cls==='none'?!t.classId:t.classId===S.tv.cls));
   const open=list.filter(t=>!t.done).sort(byDue),done=list.filter(t=>t.done).sort((a,b)=>(b.doneAt||0)-(a.doneAt||0));
-  const G=[['Overdue',t=>isOverdue(t),true],['Today',t=>t.due===td],['Tomorrow',t=>t.due===addDays(td,1)],['Next 7 days',t=>t.due&&t.due<=addDays(td,7)],['Later',t=>!!t.due],['No due date',()=>true]];
+  const G=[['Overdue',t=>isOverdue(t),true],...[0,1,2,3,4,5,6].map(i=>{const d=addDays(w,i);return[dayLabel(d),t=>t.due===d]}),['No due date',()=>true]];
   const buckets=G.map(()=>[]);
   open.forEach(t=>{const i=G.findIndex(g=>g[1](t));buckets[i].push(t)});
-  const left=open.reduce((a,t)=>a+Math.max(0,t.est-t.act),0);
+  const left=open.reduce((a,t)=>a+Math.max(0,t.est-t.act),0),wp=S.weekly[w]||0;
   const sel=S.tv.cls==='all'||S.tv.cls==='none'?'':S.tv.cls;
+  const sub=[`${open.length} open`+(open.length?` · about ${left} pomodoro${left===1?'':'s'} of work left`:''),
+    buckets[0].length?`<span style="color:var(--red)">${buckets[0].length} overdue</span>`:'',
+    w<=cur?`${done.length} done · ${wp} pomodoro${wp===1?'':'s'} completed`:''].filter(Boolean).join(' · ');
+  const wn=weekName(w);
   let h=`<div class="page">
     <div class="pg-head"><div><h1 class="pg-title">Tasks</h1>
-      <p class="pg-sub">${open.length} open${open.length?` · about ${left} pomodoro${left===1?'':'s'} of work left`:''}${buckets[0].length?` · <span style="color:var(--red)">${buckets[0].length} overdue</span>`:''}</p></div>
+      <p class="pg-sub">${sub}</p></div>
       <button class="g-primary" data-act="newTask">${ic('plus',18)}New task</button></div>
+    <div class="wknav">
+      <button class="menu-btn" data-act="week" data-d="-1" aria-label="Previous week">${ic('chevL',22)}</button>
+      <button class="menu-btn" data-act="week" data-d="1" aria-label="Next week">${ic('chevR',22)}</button>
+      <div class="wk-label"><b>${wn.startsWith('the week')?'Week':wn[0].toUpperCase()+wn.slice(1)}</b>${fmtWeek(w)}</div>
+      ${w===cur?'':`<button class="linkish" data-act="week" data-d="0">Back to this week</button>`}
+    </div>
     <form class="qadd" id="qform" autocomplete="off">
       <input class="q-title" id="q-title" placeholder="Add a task, e.g. Read chapter 7" aria-label="New task name">
       <select class="field" id="q-class" aria-label="Class">${classOptions(sel)}</select>
@@ -632,9 +710,11 @@ function renderTasks(){
       <button class="chip${S.tv.cls==='all'?' on':''}" data-act="tvCls" data-c="all">All classes</button>
       ${S.classes.map(c=>`<button class="chip${S.tv.cls===c.id?' on':''}" style="--c:${c.color}" data-act="tvCls" data-c="${c.id}"><i></i>${esc(c.name)}</button>`).join('')}
       <button class="chip${S.tv.cls==='none'?' on':''}" style="--c:${NOCLASS}" data-act="tvCls" data-c="none"><i></i>No class</button>
-    </div>`;
-  if(!open.length)h+=`<div class="empty">Nothing open here. Add a task above, or see your <button class="linkish" data-act="view" data-view="plan">day-by-day plan</button>.</div>`;
-  G.forEach((g,i)=>{if(!buckets[i].length)return;
+    </div>
+    <div class="chips"><span style="font-weight:700;font-size:13px;opacity:.85">Show by</span><div class="seg" role="group" aria-label="Show tasks by">${segBtns('tasks',S.tv.by)}</div></div>`;
+  if(!open.length)h+=`<div class="empty">${w<cur?'Nothing was left open this week — unfinished tasks carry over to the current week.':`Nothing to do ${wn}. Add a task above to get started.`}</div>`;
+  else if(S.tv.by==='class')h+=`<div style="margin-top:20px">${byClass(open).map(g=>classGroup(g,'tasks',ts=>ts.map(tRow).join(''))).join('')}</div>`;
+  else G.forEach((g,i)=>{if(!buckets[i].length)return;
     h+=`<div class="grp-h${g[2]?' od':''}">${g[0]} <span class="n">${buckets[i].length}</span></div>`+buckets[i].map(tRow).join('')});
   if(done.length){
     h+=`<div class="grp-h">Completed <span class="n">${done.length}</span> <button class="linkish" style="font-size:12px;letter-spacing:0;text-transform:none;margin-left:auto" data-act="tvDone">${S.tv.showDone?'Hide':'Show'}</button></div>`;
@@ -645,106 +725,10 @@ function renderTasks(){
 }
 function quickAdd(){
   const ti=$('#q-title'),title=ti.value.trim();if(!title){ti.focus();return}
-  upsert(null,{title,classId:$('#q-class').value,due:$('#q-due').value});
-  save();renderTasks();$('#q-title').focus();toast('Task added');
+  const w=taskWeek(upsert(null,{title,classId:$('#q-class').value,due:$('#q-due').value}));
+  save();renderTasks();$('#q-title').focus();
+  toast('Task added'+(w!==(ui.week||weekOf(today()))?` to ${weekName(w)}`:''));
 }
-
-/* ================= plan ================= */
-// Spread each open task's remaining pomodoros over the days before it's due
-// (earliest due first), keeping each day under the daily goal where possible.
-function buildPlan(){
-  const td=today(),cap=S.settings.daily,lg=S.log[td]||{},H=60;
-  const days=[];
-  const day=i=>days[i]||(days[i]={ds:addDays(td,i),items:[],load:0});
-  day(0).load=Object.values(lg).reduce((a,n)=>a+n,0);
-  const room=i=>Math.max(0,cap-day(i).load);
-  const alloc=new Map(),unplanned=[];
-  const put=(t,i,n)=>{if(n<=0)return;let a=alloc.get(t.id);if(!a)alloc.set(t.id,a=[]);a[i]=(a[i]||0)+n;day(i).load+=n};
-  const open=S.tasks.filter(t=>!t.done).sort(byDue);
-  const dated=open.filter(t=>t.due),undated=open.filter(t=>!t.due);
-  dated.forEach(t=>{
-    const dt=lg[t.id]||0;
-    let R=Math.max(0,t.est-t.act);if(!R&&!dt)R=1;
-    // work happens on the days before the due date; if it's due today or tomorrow, that means today
-    const last=Math.min(H-1,Math.max(0,dayDiff(td,t.due)-1));
-    const per=Math.ceil((R+dt)/(last+1));
-    for(let i=0;i<=last&&R>0;i++){const a=Math.min(per-(i?0:dt),R,room(i));if(a>0){put(t,i,a);R-=a}}
-    for(let i=0;R>0;i=(i+1)%(last+1)){put(t,i,1);R--}  // no room left: over the goal, spread evenly
-  });
-  undated.forEach(t=>{
-    const dt=lg[t.id]||0;
-    let R=Math.max(0,t.est-t.act);if(!R&&!dt)R=1;
-    for(let i=0;i<7&&R>0;i++){const a=Math.min(R,room(i));if(a>0){put(t,i,a);R-=a}}
-    if(R>0)unplanned.push({t,n:R});
-  });
-  const doneToday=S.tasks.filter(t=>t.done&&(lg[t.id]||(t.doneAt&&ymd(new Date(t.doneAt))===td)));
-  [...open,...doneToday].forEach(t=>{
-    const a=alloc.get(t.id)||[],dt=lg[t.id]||0,idx=[];
-    a.forEach((n,i)=>{if(n)idx.push(i)});
-    if((dt||t.done)&&!a[0])idx.unshift(0);
-    idx.forEach((i,k)=>day(i).items.push({t,n:(a[i]||0)+(i?0:dt),done:i?0:dt,part:k+1,parts:idx.length,last:k===idx.length-1}));
-  });
-  return{days,unplanned};
-}
-function pips(it,i){
-  const n=it.n;if(!n)return'';
-  const lab=i?`${n} pomodoro${n===1?'':'s'}`:`${it.done} of ${n} pomodoro${n===1?'':'s'} done`;
-  if(n>8)return `<div class="count" title="${lab}">${i?n:`${it.done}<span>/${n}</span>`}</div>`;
-  return `<div class="pips" role="img" title="${lab}" aria-label="${lab}">${[...Array(n)].map((_,k)=>`<i class="${k<it.done?'on':''}"></i>`).join('')}</div>`;
-}
-function chunkRow(it,i){
-  const t=it.t,c=cls(t.classId),od=isOverdue(t),left=it.n-it.done,fin=t.done||(!i&&left<=0);
-  const meta=[c?`<span><span class="cdot" style="background:${c.color}"></span> ${esc(c.name)}</span>`:'',
-    it.parts>1?`<span class="part">Part ${it.part} of ${it.parts}</span>`:'',
-    t.due?`<span class="${od?'od':''}">${od&&t.due<today()?'Overdue · ':''}Due ${fmtDue(t.due)}${t.time?' '+fmtTime(t.time):''}</span>`:'<span>No due date</span>'
-  ].filter(Boolean).join('<span>·</span>');
-  let chk='';
-  if(!i){
-    if(t.done)chk=`<button class="check" data-act="check" data-id="${t.id}" aria-label="Mark ${esc(t.title)} as not done">${ic('check',16)}</button>`;
-    else if(left<=0)chk=`<span class="check" style="background:var(--mode)" title="Today's part is done">${ic('check',16)}</span>`;
-    else chk=`<button class="check" data-act="chunkDone" data-id="${t.id}" data-n="${left}" data-last="${it.last?1:''}" aria-label="${it.last?'Finish':'Mark today’s part of'} ${esc(t.title)}${it.last?'':' as done'}" title="${it.last?'Finish this task':'Done with today’s part'}">${ic('check',16)}</button>`;
-  }
-  return `<div class="task chunk${fin?' done':''}" style="--c:${colorOf(t)}" data-act="openTask" data-id="${t.id}">
-    ${chk}
-    <div class="t-main"><div class="t-title">${esc(t.title)}</div><div class="t-meta">${meta}</div></div>
-    ${pips(it,i)}
-    ${t.done?'':`<button class="edit-btn play-btn" data-act="focus" data-id="${t.id}" aria-label="Focus on ${esc(t.title)}" title="Start a pomodoro on this">${ic('play',18)}</button>`}
-  </div>`;
-}
-function renderPlan(){
-  const {days,unplanned}=buildPlan(),cap=S.settings.daily;
-  let lastIdx=0;days.forEach((d,i)=>{if(d&&d.items.length)lastIdx=i});
-  const n=Math.max(7,lastIdx+1);
-  let planned=0,busy=0;
-  for(let i=0;i<n;i++){const d=days[i];if(!d||!d.items.length)continue;busy++;d.items.forEach(it=>planned+=it.n-it.done)}
-  let h=`<div class="page">
-    <div class="pg-head"><div><h1 class="pg-title">Plan</h1>
-      <p class="pg-sub">${planned?`${planned} pomodoro${planned===1?'':'s'} of work, split into daily pieces so each task is done before it's due.`:'Tasks you add get split into daily pieces here, so each one is done before it’s due.'}</p></div>
-      <button class="g-primary" data-act="newTask">${ic('plus',18)}New task</button></div>
-    <div class="goal"><span class="lbl">Daily goal<small>About ${fmtDur(cap)} of focus a day</small></span>
-      <button class="gbtn" data-act="planGoal" data-d="-1" aria-label="Lower daily goal">${ic('down',22)}</button>
-      <b aria-live="polite">${cap}</b>
-      <button class="gbtn" data-act="planGoal" data-d="1" aria-label="Raise daily goal">${ic('up',22)}</button>
-      <span>pomos</span></div>`;
-  for(let i=0;i<n;i++){
-    const d=days[i]||{ds:addDays(today(),i),items:[],load:0},dt=parse(d.ds);
-    const name=i===0?'Today':i===1?'Tomorrow':DOW[dt.getDay()];
-    const over=d.load>cap;
-    h+=`<section class="day" aria-label="${name}">
-      <div class="day-h"><h2>${name}</h2><span class="dt">${i<2?DOW3[dt.getDay()]+', ':''}${MON3[dt.getMonth()]} ${dt.getDate()}</span>
-        ${d.load?`<span class="load${over?' over':''}">${i===0&&d.items.some(x=>x.done)?`${d.items.reduce((a,x)=>a+x.done,0)} of `:''}${d.load} pomo${d.load===1?'':'s'}${over?' · over goal':''}</span>`:''}</div>
-      <div class="meter"><div style="width:${Math.min(100,d.load/cap*100)}%"></div></div>
-      ${d.items.length?d.items.map(it=>chunkRow(it,i)).join(''):`<div class="free">Nothing planned${i===0?' for today':''}.</div>`}
-    </section>`;
-  }
-  if(unplanned.length){
-    h+=`<section class="day"><div class="day-h"><h2>When you have time</h2></div><div class="meter"></div>
-      ${unplanned.map(u=>chunkRow({t:u.t,n:u.n,done:0,part:1,parts:1,last:true},1)).join('')}</section>`;
-  }
-  h+=`<button class="add-task" data-act="newTask">${ic('plusC',20)} Add Task</button></div>`;
-  $('#v-plan').innerHTML=h;
-}
-function fmtDur(p){const m=p*S.settings.pomo+Math.max(0,p-1)*S.settings.short,hh=Math.floor(m/60),mm=m%60;return hh?`${hh}h${mm?' '+mm+'m':''}`:`${mm}m`}
 
 /* ================= classes screen ================= */
 function meetText(c){
@@ -777,21 +761,29 @@ function classForm(c){
   </form>`;
 }
 function renderClasses(){
+  const canMove=!ui.classEdit&&S.classes.length>1;
   const rows=S.classes.map(c=>{
     if(ui.classEdit===c.id)return classForm(c);
     const n=S.tasks.filter(t=>t.classId===c.id&&!t.done).length;
-    return `<div class="cls-row"><span class="swatch" style="--c:${c.color}"></span>
+    return `<div class="cls-row" data-cid="${c.id}">${canMove?`<button class="grip" data-drag="cls" data-id="${c.id}" aria-label="Move ${esc(c.name)}: drag, or use the arrow keys" title="Drag to reorder">${ic('drag',20)}</button>`:''}<span class="swatch" style="--c:${c.color}"></span>
       <div class="cls-main"><div class="cls-name">${esc(c.name)}</div><div class="cls-sub">${meetText(c)}${c.location?' · '+esc(c.location):''}</div></div>
       <span class="cls-count">${n} open task${n===1?'':'s'}</span>
       <button class="g-btn" data-act="clsEdit" data-id="${c.id}">Edit</button></div>`}).join('');
   $('#v-classes').innerHTML=`<div class="page">
     <div class="pg-head"><div><h1 class="pg-title">Classes</h1>
-      <p class="pg-sub">Set each class up once. Its color follows its tasks on every screen, including your day-by-day plan.</p></div>
+      <p class="pg-sub">Set each class up once. Its color follows its tasks on every screen. Drag the handles to reorder.</p></div>
       ${ui.classEdit==='new'?'':`<button class="g-primary" data-act="clsNew">${ic('plus',18)}New class</button>`}</div>
     ${ui.classEdit==='new'?classForm(null):''}
     <div class="cls-list">${rows||(ui.classEdit==='new'?'':'<div class="empty">No classes yet. Add your first one to start sorting tasks by class.</div>')}</div>
   </div>`;
   if(ui.focusForm){ui.focusForm=false;const f=$('#c-name');if(f)f.focus()}
+}
+function reorderClasses(ids,focusId){
+  const prev=S.classes.slice(),next=ids.map(id=>prev.find(c=>c.id===id)).filter(Boolean);
+  if(next.length!==prev.length||next.every((c,i)=>c===prev[i])){renderClasses();return}
+  S.classes=next;save();renderClasses();
+  if(focusId)document.querySelector(`.grip[data-id="${focusId}"]`)?.focus();
+  toast('Classes reordered',()=>{S.classes=prev;save();renderView()});
 }
 function saveClass(){
   const f=$('#clsform'),ni=$('#c-name'),name=ni.value.trim();
@@ -834,9 +826,10 @@ function saveModal(){
   const ti=$('#m-title'),title=ti.value.trim();
   if(!title){ti.classList.add('err');ti.focus();return}
   const id=ui.modal.id;
-  upsert(id,{title,due:$('#m-due').value,time:$('#m-time').value,classId:$('#m-class').value,
+  const t=upsert(id,{title,due:$('#m-due').value,time:$('#m-time').value,classId:$('#m-class').value,
     est:clampInt($('#m-est').value,1,99,1),act:clampInt($('#m-act').value,0,999,0),note:$('#m-note').value.trim(),done:$('#m-done').checked});
-  closeModal();save();renderView();toast(id?'Task saved':'Task created');
+  const w=t&&taskWeek(t),shown=S.view==='tasks'&&ui.week||weekOf(today());
+  closeModal();save();renderView();toast((id?'Task saved':'Task created')+(w&&w!==shown?` in ${weekName(w)}`:''));
 }
 function openSettings(){
   const s=S.settings;ui.modal={type:'settings'};
@@ -885,16 +878,15 @@ function renderBanner(){$('#exbar').hidden=S.examplesDismissed||!(S.tasks.some(t
 function renderView(){
   const v=S.view;
   document.body.className='view-'+v;
-  ['timer','tasks','plan','classes'].forEach(x=>{$('#v-'+x).hidden=x!==v;$('#tab-'+x).classList.toggle('on',x===v)});
+  ['timer','tasks','classes'].forEach(x=>{$('#v-'+x).hidden=x!==v;$('#tab-'+x).classList.toggle('on',x===v)});
   renderBanner();
   if(v==='timer'){applyMode();renderTimerTasks()}
   else if(v==='tasks')renderTasks();
-  else if(v==='plan')renderPlan();
   else renderClasses();
   updateClock();
 }
 function setView(v){
-  if(!['timer','tasks','plan','classes'].includes(v))v='timer';
+  if(!['timer','tasks','classes'].includes(v))v='timer';
   $('#tmenu').hidden=true;
   if(v!=='classes'&&S.view==='classes'){ui.classEdit=null;ui.delConfirm=null}
   S.view=v;save();renderView();window.scrollTo(0,0);
@@ -933,11 +925,9 @@ const A={
   newTask(){const pre={};if(S.view==='tasks'&&cls(S.tv.cls))pre.classId=S.tv.cls;openTaskModal(null,pre)},
   tvCls(el){S.tv.cls=el.dataset.c;save();renderTasks()},
   tvDone(){S.tv.showDone=!S.tv.showDone;save();renderTasks()},
-  planGoal(el){S.settings.daily=clampInt(S.settings.daily+ +el.dataset.d,1,24,8);save();renderPlan()},
-  chunkDone(el,e,id){const t=task(id);if(!t)return;
-    const n=+el.dataset.n,last=!!el.dataset.last,lg=logToday(),prev={act:t.act,done:t.done,doneAt:t.doneAt,lg:lg[id]||0};
-    t.act+=n;lg[id]=prev.lg+n;if(last){t.done=true;t.doneAt=Date.now()}delete t.ex;save();renderPlan();
-    toast(last?'Task finished':'Today’s part is done',()=>{Object.assign(t,{act:prev.act,done:prev.done,doneAt:prev.doneAt});const l=logToday();if(prev.lg)l[id]=prev.lg;else delete l[id];save();renderView()})},
+  week(el){const cur=weekOf(today()),d=+el.dataset.d,w=d?addDays(ui.week||cur,7*d):cur;ui.week=w===cur?null:w;renderTasks()},
+  groupBy(el){const o=el.dataset.where==='timer'?S.tl:S.tv;o.by=el.dataset.by;save();renderView()},
+  groupToggle(el){const k=el.dataset.key;if(ui.open.has(k))ui.open.delete(k);else ui.open.add(k);renderView()},
   clsNew(){ui.classEdit='new';ui.delConfirm=null;ui.focusForm=true;renderClasses()},
   clsEdit(el,e,id){ui.classEdit=id;ui.delConfirm=null;ui.focusForm=true;renderClasses()},
   clsCancel(){ui.classEdit=null;ui.delConfirm=null;renderClasses()},
@@ -959,6 +949,58 @@ const A={
   keepExamples(){S.examplesDismissed=true;save();renderBanner()},
   undo(){const u=ui.undo;ui.undo=null;$('#toast').hidden=true;if(u)u()}
 };
+
+/* ================= drag & drop ================= */
+// Pointer-based so it works with mouse and touch. Handles carry data-drag:
+// Only class rows (data-drag="cls") are draggable.
+const dnd={s:null,raf:0,noClick:false};
+function dragStart(s){
+  const h=s.h,kind=h.dataset.drag;
+  s.row=h.closest('.cls-row');const r=s.row.getBoundingClientRect();
+  const g=s.row.cloneNode(true);g.style.width=r.width+'px';s.dx=s.x-r.left;s.dy=s.y-r.top;
+  s.row.classList.add('lifted');
+  s.on=true;s.kind=kind;g.classList.add('ghost');document.body.appendChild(g);s.g=g;
+  document.body.classList.add('dnd','dnd-'+kind);
+  dnd.raf=requestAnimationFrame(dragTick);
+}
+function dragOver(x,y){
+  const s=dnd.s;
+  s.g.style.transform=`translate(${x-s.dx}px,${y-s.dy}px)`;
+  const list=s.row.parentElement,rows=[...list.querySelectorAll('.cls-row[data-cid]')].filter(r=>r!==s.row);
+  const before=rows.find(r=>{const b=r.getBoundingClientRect();return y<b.top+b.height/2})||null;
+  if(s.row.nextElementSibling!==before||(!before&&list.lastElementChild!==s.row))list.insertBefore(s.row,before);
+}
+function dragTick(){
+  const s=dnd.s;if(!s||!s.on)return;
+  const e=56,y=s.cy;let v=0;
+  if(y<e)v=-(e-y)/3;else if(y>innerHeight-e)v=(y-innerHeight+e)/3;
+  if(v){scrollBy(0,v);dragOver(s.cx,s.cy)}
+  dnd.raf=requestAnimationFrame(dragTick);
+}
+function dragEnd(drop){
+  const s=dnd.s;dnd.s=null;if(!s||!s.on)return;
+  cancelAnimationFrame(dnd.raf);s.g.remove();s.row.classList.remove('lifted');
+  document.body.classList.remove('dnd','dnd-'+s.kind);
+  dnd.noClick=true;setTimeout(()=>{dnd.noClick=false},0);
+  if(drop)reorderClasses([...s.row.parentElement.querySelectorAll('.cls-row[data-cid]')].map(r=>r.dataset.cid));
+  else renderClasses();
+}
+document.addEventListener('pointerdown',e=>{
+  if(e.button!==0||ui.modal||dnd.s)return;
+  const h=e.target.closest('[data-drag]');if(!h)return;
+  if(e.pointerType==='mouse')e.preventDefault();
+  dnd.s={h,x:e.clientX,y:e.clientY,cx:e.clientX,cy:e.clientY,pid:e.pointerId,on:false};
+});
+document.addEventListener('pointermove',e=>{
+  const s=dnd.s;if(!s||e.pointerId!==s.pid)return;
+  s.cx=e.clientX;s.cy=e.clientY;
+  if(!s.on){if(Math.hypot(s.cx-s.x,s.cy-s.y)<6)return;dragStart(s);if(!dnd.s)return}
+  e.preventDefault();dragOver(s.cx,s.cy);
+},{passive:false});
+document.addEventListener('pointerup',e=>{if(dnd.s&&e.pointerId===dnd.s.pid){if(dnd.s.on)dragEnd(true);else dnd.s=null}});
+document.addEventListener('pointercancel',e=>{if(dnd.s&&e.pointerId===dnd.s.pid){if(dnd.s.on)dragEnd(false);else dnd.s=null}});
+// a finished drag shouldn't also count as a click on whatever it ended over
+document.addEventListener('click',e=>{if(dnd.noClick){e.stopPropagation();e.preventDefault()}},true);
 
 /* ================= events ================= */
 document.addEventListener('click',e=>{
@@ -983,17 +1025,23 @@ document.addEventListener('keydown',e=>{
     else if(ui.classEdit&&S.view==='classes'){ui.classEdit=null;renderClasses()}
     return;
   }
+  if((e.key==='ArrowUp'||e.key==='ArrowDown')&&e.target.classList?.contains('grip')){
+    e.preventDefault();
+    const ids=S.classes.map(c=>c.id),id=e.target.dataset.id,i=ids.indexOf(id),j=i+(e.key==='ArrowUp'?-1:1);
+    if(i<0||j<0||j>=ids.length)return;
+    [ids[i],ids[j]]=[ids[j],ids[i]];reorderClasses(ids,id);return;
+  }
   if(e.code==='Space'&&S.view==='timer'&&!ui.modal&&!/INPUT|TEXTAREA|SELECT|BUTTON/.test(document.activeElement?.tagName||'')){e.preventDefault();A.toggle()}
 });
-window.addEventListener('storage',e=>{if(e.key===KEY){S=load();if(!ui.modal&&!typing())renderView()}});
+window.addEventListener('storage',e=>{if(e.key===KEY){S=load();if(!ui.modal&&!typing()&&!dnd.s)renderView()}});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateClock()});
 
 setInterval(()=>{if(running()&&remain()<=0)complete(false);updateClock()},250);
 setInterval(()=>{
-  if(ui.modal||typing())return;
-  if(S.view==='plan')renderPlan();
-  else if(S.view==='tasks')renderTasks();
-  else if(S.view==='timer'&&!ui.editing)renderSummary();
+  const rolled=rollWeek(S);if(rolled){save();updateClock()}
+  if(ui.modal||typing()||dnd.s)return;
+  if(S.view==='tasks')renderTasks();
+  else if(S.view==='timer'&&!ui.editing){if(rolled)renderTimerTasks();else renderSummary()}
 },60000);
 
 /* ================= boot ================= */
